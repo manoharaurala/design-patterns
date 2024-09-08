@@ -17,5 +17,10 @@ public class ButtonFactoryTest {
                 "If the screen size is of a phone, the btn should be round"
         );
 
+        buttonFactory=new SquareButtonFactory();
+        button=buttonFactory.createButton(10.0, 0.4, null);
+
+        assertTrue(button instanceof SquareButton,"If the screen size is of a desktop, the btn should be square");
+
     }
 }

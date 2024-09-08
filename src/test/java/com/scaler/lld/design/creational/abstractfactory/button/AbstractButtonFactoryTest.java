@@ -21,4 +21,16 @@ public class AbstractButtonFactoryTest {
         );
 
     }
+
+    @Test
+    public void testDarkTheme(){
+        DarkThemeFactory darkThemeFactory=new DarkThemeFactory();
+        Button button=darkThemeFactory.createButton(20.0,0.8,null);
+        Radio radio=darkThemeFactory.createRadio();
+
+        assertTrue(button instanceof  DarkButton,"If the factory is dark, it should be a dark button");
+        assertTrue(radio instanceof DarkRadio,
+                "If the factory is dark, it should be a dark radio"
+                );
+    }
 }
